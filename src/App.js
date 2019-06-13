@@ -1,17 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import DogsListContainer from './components/DogsListContainer'
+import { Route } from 'react-router-dom'
+import DogBreedImagesContainer from './components/DogBreedImagesContainer'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         
       </header>
       <main>
-        <DogsListContainer />
+      <Route exact path="/" component={DogsListContainer} />
+      <Route exact path="/dog-breeds/:breed/" component={DogBreedImagesContainer} />
+      
       </main>
     </div>
   );

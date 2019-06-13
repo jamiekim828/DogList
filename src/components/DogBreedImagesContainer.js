@@ -20,6 +20,8 @@ export default class DogsListContainer extends React.Component {
     }
 
     render() {
-        return <DogBreedImages images={this.state.images} />
+        return <DogBreedImages 
+          images={this.state.images} 
+          breed={this.props.match.params.breed} />
     }
 }
